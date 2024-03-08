@@ -1,0 +1,28 @@
+#:kivy 2.1.0
+
+<SnakeGame>:
+    canvas:
+        Color:
+            rgb: 0.2, 0.2, 0.2
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+        Color:
+            rgb: 0.6, 0.8, 0.2
+        Rectangle:
+            pos: self.food_position[0] - 5, self.food_position[1] - 5
+            size: 10, 10
+
+        Color:
+            rgb: 0.2, 0.8, 0.2
+        Rectangle:
+            pos: self.snake_body[0][0] - 5, self.snake_body[0][1] - 5
+            size: 10, 10
+
+        Color:
+            rgb: 0.6, 0.6, 0.6
+        Rectangle:
+            pos: segment[0] - 5, segment[1] - 5
+            size: 10, 10
+            for segment in self.snake_body[1:]
